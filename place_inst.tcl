@@ -46,7 +46,7 @@ proc check_if_globally_placed {} {
 #   Places a specified instance at (x_microns, y_microns).
 #   But first checks if the design is globally placed.
 #   If not, it refuses to proceed.
-#   Finally, it calls 'global_placement' for incremental placement
+#   Finally, it calls 'detailed_placement' for incremental placement
 #
 proc place_inst {inst_name x_microns y_microns} {
 
@@ -80,6 +80,6 @@ proc place_inst {inst_name x_microns y_microns} {
 
     puts "INFO: Placed instance '$inst_name' at ($x_microns, $y_microns) microns, i.e. ($x_dbu, $y_dbu) DBU."
 
-    # 5) Call  “global_placement” command
-    global_placement
+    # 5) Call  “detailed_placement” command
+    detailed_placement
 }
